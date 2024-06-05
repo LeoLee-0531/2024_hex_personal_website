@@ -1,0 +1,576 @@
+@import "reset";
+@import "variable";
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Noto Sans TC", sans-serif;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+// header
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 28px 312px;
+}
+
+.current_page {
+  font-weight: bold;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+
+  a {
+    display: block;
+    padding: 4px 8px;
+    text-decoration: none;
+    color: black;
+  }
+}
+
+.menu_btn {
+  display: none;
+
+  .material-symbols-outlined {
+    font-size: 42px;
+  }
+}
+
+#menu_btn-checkbox {
+  display: none;
+}
+
+.menu_burger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  width: 100%;
+  gap: 24px;
+  margin-bottom: 40px;
+
+  &-item {
+    a {
+      display: block;
+      text-decoration: none;
+      color: #000;
+    }
+  }
+}
+
+@media (max-width: 1324px) {
+  header {
+    padding: 28px 12px;
+  }
+}
+
+@media (max-width: 764px) {
+  .blank {
+    display: none;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .menu_btn {
+    display: block;
+  }
+}
+
+// banner
+
+.banner {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  margin-left: 100px;
+  margin-bottom: 120px;
+  gap: 24px;
+}
+
+.banner-intro-title {
+  font-size: $fs_banner-intro-title;
+  color: $fc_first;
+  margin-bottom: 24px;
+}
+
+.banner-intro-content {
+  font-size: $fs_banner-intro-content;
+  color: $fc_second;
+  line-height: $lh_banner-intro-content;
+  margin-bottom: 16px;
+}
+
+.banner-intro-tech {
+  color: $fc_third;
+  margin-bottom: 60px;
+}
+
+.banner-intro-links {
+  display: flex;
+  gap: 16px;
+}
+
+.banner-img {
+  content: url(https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/hero-lg.png?raw=true);
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 1324px) {
+  .banner {
+    flex-direction: column-reverse;
+    align-items: center;
+    margin-left: 0;
+  }
+
+  .banner-img {
+    content: url(https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/hero-sm.png?raw=true);
+  }
+}
+
+// main
+
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 80px;
+
+  &-text {
+    font-size: $fs_title-text;
+    color: $fc_first;
+  }
+
+  &-dec-left {
+    background: url(https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/title-deco-left-lg.png?raw=true);
+    display: inline-block;
+    width: 100px;
+    height: 6px;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &-dec-right {
+    background: url(https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/title-deco-right-lg.png?raw=true);
+    display: inline-block;
+    width: 100px;
+    height: 6px;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+.homepage-work1 {
+  background: url(https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/homepage-work1-bg.png?raw=true);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.homepage-work1-box {
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 55px;
+
+  &-image {
+    width: 714px;
+    margin-top: 80px;
+  }
+}
+
+.homepage-work2 {
+  background: url(https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/homepage-work2-lg.png?raw=true);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.homepage-work2-box {
+  background-color: rgba(0, 0, 0, 0.5);
+  max-width: 948px;
+  display: flex;
+  justify-content: end;
+  padding: 200px 0;
+  padding-right: 110px;
+}
+
+.homepage-work3 {
+  background: url(https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/homepage-work3-bg.png?raw=true);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.homepage-work3-box {
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 49px;
+
+  &-image {
+    width: 721px;
+    margin: 176px 0;
+  }
+}
+
+.homepage-works-contentbox {
+  width: 526px;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  padding: 80px 40px;
+  gap: 40px;
+  border-radius: 24px;
+
+  &-text {
+    border-bottom: 1px solid #fff;
+    color: $fc_homepage-works-contentbox-text;
+
+    &-title {
+      font-size: $fs_homepage-works-contentbox-text-title;
+      margin-bottom: 8px;
+    }
+
+    &-paragraph {
+      margin-bottom: 24px;
+    }
+  }
+
+  &-tags {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 40px;
+
+    li {
+      color: $fc_first;
+      background-color: #fff;
+      line-height: $lh_homepage-works-contentbox-tags;
+      border-radius: 16px;
+      padding: 4px 12px;
+    }
+  }
+
+  &-botton {
+    display: flex;
+    align-items: center;
+    font-size: $fs_botton;
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+    line-height: $lh_botton;
+    padding: 16px 32px;
+    gap: 8px;
+    margin: 0 auto;
+    border-radius: 5px;
+  }
+}
+
+.homepage-works-contentbox_phone {
+  background-color: #fff;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  padding: 48px 0;
+
+  &-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 1px solid #fff;
+    color: #000;
+
+    &-title {
+      font-size: $fs_homepage-works-contentbox-text-title;
+      margin-bottom: 8px;
+    }
+
+    &-paragraph {
+      margin-bottom: 16px;
+      line-height: 24px;
+    }
+  }
+
+  &-tags {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 20px;
+
+    li {
+      color: $fc_first;
+      background-color: #f1f1f1;
+      line-height: $lh_homepage-works-contentbox-tags;
+      border-radius: 16px;
+      padding: 4px 12px;
+    }
+  }
+
+  &-botton {
+    display: flex;
+    align-items: center;
+    font-size: $fs_botton;
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+    line-height: $lh_botton;
+    padding: 16px 32px;
+    gap: 8px;
+    margin: 0 auto;
+    border-radius: 5px;
+  }
+}
+
+@media (max-width: 1324px) {
+  .homepage-work1-box {
+    flex-direction: column;
+
+    &-image {
+      max-width: 714px;
+      width: 100%;
+      height: auto;
+      display: block;
+      padding: 0 50px;
+      padding-top: 90px;
+      margin: 0 auto;
+    }
+  }
+
+  // .homepage-work2 {
+  //     background: url(https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/homepage-work2-sm.png?raw=true);
+  //     background-repeat: no-repeat;
+  //     background-size: cover;
+  // }
+
+  .homepage-work2-box {
+    background-color: rgba(0, 0, 0, 0);
+  }
+
+  .homepage-work3-box {
+    flex-direction: column;
+
+    &-image {
+      max-width: 714px;
+      width: 100%;
+      height: auto;
+      display: block;
+      padding: 90px 50px;
+      margin: 0 auto;
+    }
+  }
+
+  .homepage-works-contentbox {
+    display: none;
+  }
+
+  .homepage-works-contentbox_phone {
+    display: flex;
+  }
+}
+
+.homepage-service {
+  background: url(https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/homepage-services-bg.png?raw=true);
+  padding: 120px 0;
+}
+
+.homepage-service-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-bottom: 80px;
+
+  &-item {
+    background: url(https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/service-item-bg.png?raw=true);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 306px;
+    padding: 80px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 16px;
+
+    &-text {
+      font-size: $fs_homepage-service-list-itme;
+      color: $fc_homepage-service-list-item;
+      line-height: $lh_homepage-service-list-item;
+      margin-top: 24px;
+    }
+  }
+}
+
+.homepage-service-contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+
+  &-text {
+    color: $fc_first;
+    font-size: $fs_homepage-service-contact-text;
+  }
+
+  &-botton {
+    text-decoration: none;
+    background-color: #000;
+    color: #fff;
+    font-size: $fs_botton;
+    line-height: $lh_botton;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 32px;
+    border-radius: 5px;
+    gap: 8px;
+  }
+}
+
+.homepage-articles {
+  padding: 120px 0;
+}
+
+.homepage-articles-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.homepage-articles-list-item {
+  max-width: 416px;
+
+  img {
+    border-radius: 5px;
+  }
+
+  &-title {
+    margin: 16px 0;
+    font-size: $fs_homepage-articles-list-item-title;
+  }
+
+  &-tags {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .tag {
+      background-color: $fc_articles-tags;
+      border-radius: 16px;
+      line-height: $lh_homepage-articles-list-item;
+      padding: 4px 12px;
+    }
+
+    .date {
+      line-height: $lh_homepage-articles-list-item;
+    }
+  }
+}
+
+.homepage-articles-pagination {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+
+  .pagination-dots {
+    width: 12px;
+    height: 12px;
+    background-color: $fc_articles-pagination-dots;
+    border-radius: 6px;
+  }
+
+  .recent-page {
+    background-color: #000;
+  }
+}
+
+// footer
+
+footer {
+  background: url(https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/footer-bg-lg.png?raw=true);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: space-between;
+  padding: 80px 312px;
+}
+
+@media (max-width: 1324px) {
+  footer {
+    padding: 80px 36px;
+  }
+}
+
+@media (max-width: 764px) {
+  footer {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+}
+
+.footer-intro {
+  &-text {
+    font-size: $fs_footer;
+    color: $fc_first;
+    line-height: $lh_footer;
+    margin: 24px 0;
+  }
+
+  &-email {
+    font-size: $fs_footer;
+    color: $fc_footer-intro-email;
+    line-height: $lh_footer;
+  }
+}
+
+.footer-links-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  &-item {
+    width: 306px;
+    background-color: #fff;
+    border: 1px solid $fc_third;
+    border-radius: 8px;
+
+    a {
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      font-size: $fs_footer;
+      color: $fc_first;
+      line-height: $lh_footer;
+      padding: 8px 24px;
+      gap: 8px;
+    }
+  }
+
+  .black {
+    background-color: #000;
+
+    a {
+      color: #fff;
+    }
+  }
+}

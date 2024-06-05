@@ -1,0 +1,559 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Noto Sans TC", sans-serif;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 28px 312px;
+}
+
+.current_page {
+  font-weight: bold;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.menu a {
+  display: block;
+  padding: 4px 8px;
+  text-decoration: none;
+  color: black;
+}
+
+.menu_btn {
+  display: none;
+}
+.menu_btn .material-symbols-outlined {
+  font-size: 42px;
+}
+
+#menu_btn-checkbox {
+  display: none;
+}
+
+.menu_burger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  width: 100%;
+  gap: 24px;
+  margin-bottom: 40px;
+}
+.menu_burger-item a {
+  display: block;
+  text-decoration: none;
+  color: #000;
+}
+
+@media (max-width: 1324px) {
+  header {
+    padding: 28px 12px;
+  }
+}
+@media (max-width: 764px) {
+  .blank {
+    display: none;
+  }
+  .menu {
+    display: none;
+  }
+  .menu_btn {
+    display: block;
+  }
+}
+.banner {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  margin-left: 100px;
+  margin-bottom: 120px;
+  gap: 24px;
+}
+
+.banner-intro-title {
+  font-size: 40px;
+  color: #3B3B3B;
+  margin-bottom: 24px;
+}
+
+.banner-intro-content {
+  font-size: 20px;
+  color: #5B5B5B;
+  line-height: 30px;
+  margin-bottom: 16px;
+}
+
+.banner-intro-tech {
+  color: #C1C1C1;
+  margin-bottom: 60px;
+}
+
+.banner-intro-links {
+  display: flex;
+  gap: 16px;
+}
+
+.banner-img {
+  content: url(https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/hero-lg.png?raw=true);
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 1324px) {
+  .banner {
+    flex-direction: column-reverse;
+    align-items: center;
+    margin-left: 0;
+  }
+  .banner-img {
+    content: url(https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/hero-sm.png?raw=true);
+  }
+}
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 80px;
+}
+.title-text {
+  font-size: 30px;
+  color: #3B3B3B;
+}
+.title-dec-left {
+  background: url(https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/title-deco-left-lg.png?raw=true);
+  display: inline-block;
+  width: 100px;
+  height: 6px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.title-dec-right {
+  background: url(https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/title-deco-right-lg.png?raw=true);
+  display: inline-block;
+  width: 100px;
+  height: 6px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.homepage-work1 {
+  background: url(https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/homepage-work1-bg.png?raw=true);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.homepage-work1-box {
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 55px;
+}
+.homepage-work1-box-image {
+  width: 714px;
+  margin-top: 80px;
+}
+
+.homepage-work2 {
+  background: url(https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/homepage-work2-lg.png?raw=true);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.homepage-work2-box {
+  background-color: rgba(0, 0, 0, 0.5);
+  max-width: 948px;
+  display: flex;
+  justify-content: end;
+  padding: 200px 0;
+  padding-right: 110px;
+}
+
+.homepage-work3 {
+  background: url(https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/homepage-work3-bg.png?raw=true);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.homepage-work3-box {
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 49px;
+}
+.homepage-work3-box-image {
+  width: 721px;
+  margin: 176px 0;
+}
+
+.homepage-works-contentbox {
+  width: 526px;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.1);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  padding: 80px 40px;
+  gap: 40px;
+  border-radius: 24px;
+}
+.homepage-works-contentbox-text {
+  border-bottom: 1px solid #fff;
+  color: #FFFFFF;
+}
+.homepage-works-contentbox-text-title {
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+.homepage-works-contentbox-text-paragraph {
+  margin-bottom: 24px;
+}
+.homepage-works-contentbox-tags {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 40px;
+}
+.homepage-works-contentbox-tags li {
+  color: #3B3B3B;
+  background-color: #fff;
+  line-height: 24px;
+  border-radius: 16px;
+  padding: 4px 12px;
+}
+.homepage-works-contentbox-botton {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  background-color: #000;
+  color: #fff;
+  text-decoration: none;
+  line-height: 30px;
+  padding: 16px 32px;
+  gap: 8px;
+  margin: 0 auto;
+  border-radius: 5px;
+}
+
+.homepage-works-contentbox_phone {
+  background-color: #fff;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  padding: 48px 0;
+}
+.homepage-works-contentbox_phone-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 1px solid #fff;
+  color: #000;
+}
+.homepage-works-contentbox_phone-text-title {
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+.homepage-works-contentbox_phone-text-paragraph {
+  margin-bottom: 16px;
+  line-height: 24px;
+}
+.homepage-works-contentbox_phone-tags {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+.homepage-works-contentbox_phone-tags li {
+  color: #3B3B3B;
+  background-color: #f1f1f1;
+  line-height: 24px;
+  border-radius: 16px;
+  padding: 4px 12px;
+}
+.homepage-works-contentbox_phone-botton {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  background-color: #000;
+  color: #fff;
+  text-decoration: none;
+  line-height: 30px;
+  padding: 16px 32px;
+  gap: 8px;
+  margin: 0 auto;
+  border-radius: 5px;
+}
+
+@media (max-width: 1324px) {
+  .homepage-work1-box {
+    flex-direction: column;
+  }
+  .homepage-work1-box-image {
+    max-width: 714px;
+    width: 100%;
+    height: auto;
+    display: block;
+    padding: 0 50px;
+    padding-top: 90px;
+    margin: 0 auto;
+  }
+  .homepage-work2-box {
+    background-color: rgba(0, 0, 0, 0);
+  }
+  .homepage-work3-box {
+    flex-direction: column;
+  }
+  .homepage-work3-box-image {
+    max-width: 714px;
+    width: 100%;
+    height: auto;
+    display: block;
+    padding: 90px 50px;
+    margin: 0 auto;
+  }
+  .homepage-works-contentbox {
+    display: none;
+  }
+  .homepage-works-contentbox_phone {
+    display: flex;
+  }
+}
+.homepage-service {
+  background: url(https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/homepage-services-bg.png?raw=true);
+  padding: 120px 0;
+}
+
+.homepage-service-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-bottom: 80px;
+}
+.homepage-service-list-item {
+  background: url(https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/service-item-bg.png?raw=true);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 306px;
+  padding: 80px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 16px;
+}
+.homepage-service-list-item-text {
+  font-size: 28px;
+  color: #FFFFFF;
+  line-height: 24px;
+  margin-top: 24px;
+}
+
+.homepage-service-contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+.homepage-service-contact-text {
+  color: #3B3B3B;
+  font-size: 28px;
+}
+.homepage-service-contact-botton {
+  text-decoration: none;
+  background-color: #000;
+  color: #fff;
+  font-size: 20px;
+  line-height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 32px;
+  border-radius: 5px;
+  gap: 8px;
+}
+
+.homepage-articles {
+  padding: 120px 0;
+}
+
+.homepage-articles-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.homepage-articles-list-item {
+  max-width: 416px;
+}
+.homepage-articles-list-item img {
+  border-radius: 5px;
+}
+.homepage-articles-list-item-title {
+  margin: 16px 0;
+  font-size: 20px;
+}
+.homepage-articles-list-item-tags {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.homepage-articles-list-item-tags .tag {
+  background-color: #F1F1F1;
+  border-radius: 16px;
+  line-height: 24px;
+  padding: 4px 12px;
+}
+.homepage-articles-list-item-tags .date {
+  line-height: 24px;
+}
+
+.homepage-articles-pagination {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+.homepage-articles-pagination .pagination-dots {
+  width: 12px;
+  height: 12px;
+  background-color: #E9E9E9;
+  border-radius: 6px;
+}
+.homepage-articles-pagination .recent-page {
+  background-color: #000;
+}
+
+footer {
+  background: url(https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/footer-bg-lg.png?raw=true);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: space-between;
+  padding: 80px 312px;
+}
+
+@media (max-width: 1324px) {
+  footer {
+    padding: 80px 36px;
+  }
+}
+@media (max-width: 764px) {
+  footer {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+}
+.footer-intro-text {
+  font-size: 20px;
+  color: #3B3B3B;
+  line-height: 30px;
+  margin: 24px 0;
+}
+.footer-intro-email {
+  font-size: 20px;
+  color: #919191;
+  line-height: 30px;
+}
+
+.footer-links-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.footer-links-list-item {
+  width: 306px;
+  background-color: #fff;
+  border: 1px solid #C1C1C1;
+  border-radius: 8px;
+}
+.footer-links-list-item a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  color: #3B3B3B;
+  line-height: 30px;
+  padding: 8px 24px;
+  gap: 8px;
+}
+.footer-links-list .black {
+  background-color: #000;
+}
+.footer-links-list .black a {
+  color: #fff;
+}/*# sourceMappingURL=all.css.map */
