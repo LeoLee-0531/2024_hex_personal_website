@@ -1,0 +1,103 @@
+@import "../base/variable";
+
+.homepage-works-contentbox {
+    width: 526px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    padding: 80px 40px;
+    gap: 40px;
+    border-radius: 24px;
+  
+    &-text {
+      border-bottom: 1px solid #fff;
+      color: $fc_homepage-works-contentbox-text;
+  
+      &-title {
+        font-size: $fs_homepage-works-contentbox-text-title;
+        margin-bottom: 8px;
+      }
+  
+      &-paragraph {
+        margin-bottom: 24px;
+      }
+    }
+  
+    &-tags {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 40px;
+  
+      li {
+        color: $fc_first;
+        background-color: #fff;
+        border-radius: 16px;
+        padding: 4px 12px;
+      }
+    }
+  
+    &-botton {
+      display: flex;
+      align-items: center;
+      font-size: $fs_botton;
+      background-color: #000;
+      color: #fff;
+      text-decoration: none;
+      padding: 16px 32px;
+      gap: 8px;
+      margin: 0 auto;
+      border-radius: 5px;
+    }
+  }
+  
+  .homepage-works-contentbox_phone {
+    background-color: #fff;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    padding: 48px 0;
+  
+    &-text {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border-bottom: 1px solid #fff;
+      color: #000;
+  
+      &-title {
+        font-size: $fs_homepage-works-contentbox-text-title;
+        margin-bottom: 8px;
+      }
+  
+      &-paragraph {
+        margin-bottom: 16px;
+      }
+    }
+  
+    &-tags {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 20px;
+  
+      li {
+        color: $fc_first;
+        background-color: #f1f1f1;
+        border-radius: 16px;
+        padding: 4px 12px;
+      }
+    }
+  
+    &-botton {
+      display: flex;
+      align-items: center;
+      font-size: $fs_botton;
+      background-color: #000;
+      color: #fff;
+      text-decoration: none;
+      padding: 16px 32px;
+      gap: 8px;
+      margin: 0 auto;
+      border-radius: 5px;
+    }
+  }
